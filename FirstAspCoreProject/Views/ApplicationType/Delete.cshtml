@@ -1,0 +1,25 @@
+﻿@model FirstAspCoreProject.Models.ApplicationType
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="row">
+    <h1 class="text-info pb-4">Delete Type</h1>
+</div>
+<form method="post" asp-action="DeletePost">
+    <input asp-for="Id" hidden />
+    <div class="row">
+        <div class="mr-2">
+            <label asp-for="Name" style="font-size:30px; color:aquamarine; font-family:'Lucida Sans'"></label>
+        </div>
+        <div class="col">
+            <input asp-for="Name" class="form-control" disabled>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-success w-100">Delete</button>
+        </div>
+        <div class="col">
+            <a class="btn btn-primary w-100" asp-action="Index">Back</a>
+        </div>
+    </div>
+</form>
